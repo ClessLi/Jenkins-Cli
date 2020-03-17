@@ -18,8 +18,8 @@ var (
 
 type jkConf struct {
 	BaseUrl  string `yaml:"baseUrl"`
-	User     string `yaml:"auth.user.name"`
-	ApiToken string `yaml:"auth.user.token"`
+	User     string `yaml:"username"`
+	ApiToken string `yaml:"token"`
 }
 
 func main() {

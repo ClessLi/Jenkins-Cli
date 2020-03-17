@@ -1,5 +1,3 @@
 baseUrl: "http://localhost:8080/jenkins"
-auth:
-  user:
-    - name: test
-      token: xxxxx
+username: test
+token: xxxxx

@@ -37,6 +37,7 @@ func main() {
 	}
 
 	confData, readErr := readFile(*confPath)
+	//confData, readErr := readFile("F:/GO_Project/src/Jenkins-Cli/cmd/jk_cli/conf.yaml")
 	if readErr != nil {
 		fmt.Println(readErr)
 		os.Exit(1)
@@ -56,15 +57,29 @@ func main() {
 	if *views != "" {
 		viewList = strings.Split(*views, ",")
 	}
+	// 代码测试
+	//views := "test_view1,test_view2"
+	//viewList = strings.Split(views, ",")
 
 	jobs, err := jkClinet.GetJobsByViews(viewList)
 	if err != nil {
 		fmt.Println(err)
 		os.Exit(1)
 	}
+
+	//jobsInfo := []string{"Job_Name\tBuild_Times\n"}
+	jobsInfo := "Job_Name\tBuild_Times\n"
 	for _, job := range jobs {
-		fmt.Println(job.Name)
+		job, err = jkClinet.GetJob(job.Name)
+		if err != nil {
+			fmt.Println(err)
+			os.Exit(1)
+		}
+		//fmt.Println(job.Name, job.LastBuild.Number)
+		//jobsInfo = append(jobsInfo, fmt.Sprintf("%s\t%d\n", job.Name, job.LastBuild.Number))
+		jobsInfo = jobsInfo + fmt.Sprintf("%s\t%d\n", job.Name, job.LastBuild.Number)
 	}
+	fmt.Println(jobsInfo)
 }
 
 func readFile(path string) ([]byte, error) {

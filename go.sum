@@ -1,5 +1,5 @@
-github.com/ClessLi/golang-jenkins v1.0.2 h1:+fQVeThUuZrGfz1aoaM64YA1xB7BJGpsukk3qy241T4=
-github.com/ClessLi/golang-jenkins v1.0.2/go.mod h1:oBtTE4izNfB+vrfdqpmqqePtJMEdOKqDJNYsZvfu79U=
+github.com/ClessLi/golang-jenkins v1.0.3 h1:Q0iAjdMtbaasUJuOIO9vt49rmI3ORC+3fTzPLf+Viog=
+github.com/ClessLi/golang-jenkins v1.0.3/go.mod h1:oBtTE4izNfB+vrfdqpmqqePtJMEdOKqDJNYsZvfu79U=
 github.com/go-yaml/yaml v2.1.0+incompatible h1:RYi2hDdss1u4YE7GwixGzWwVo47T8UQwnTLB6vQiq+o=
 github.com/go-yaml/yaml v2.1.0+incompatible/go.mod h1:w2MrLa16VYP0jy6N7M5kHaCkaLENm+P+Tv+MfurjSw0=
 github.com/kr/pty v1.1.1/go.mod h1:pFQYn66WHrOpPYNljwOMqo10TkYh1fy3cYio2l3bCsQ=

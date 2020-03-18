@@ -54,7 +54,7 @@ func main() {
 	}, conf.BaseUrl)
 
 	if *views != "" {
-		viewList = strings.Fields(",")
+		viewList = strings.Split(*views, ",")
 	}
 
 	jobs, err := jkClinet.GetJobsByViews(viewList)
